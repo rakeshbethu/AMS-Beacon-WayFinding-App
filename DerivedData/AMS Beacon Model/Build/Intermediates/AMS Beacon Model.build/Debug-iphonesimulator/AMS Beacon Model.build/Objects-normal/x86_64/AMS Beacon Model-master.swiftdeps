@@ -1,0 +1,15 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "58e6d0a192f4d278aba2637dcb55b6bb"
+build_time: [554399223, 796047000]
+inputs:
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/BeaconContentFactory.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/ProximityContentManager.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/ViewController.swift": [553885355, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/CachingContentFactory.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/AppDelegate.swift": [553280363, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/NearestBeaconManager.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/BeaconID.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/BuildingVC.swift": [553793503, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/BeaconDetailsCloudFactory.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/BeaconDetails.swift": [525161628, 0]
+  "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/Estimote/BeaconDetailsStaticFactory.swift": [525161628, 0]

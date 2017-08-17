@@ -1,0 +1,448 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BeaconDetails"
+provides-nominal:
+- "C16AMS_Beacon_Model13BeaconDetails"
+provides-member:
+- ["C16AMS_Beacon_Model13BeaconDetails", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "??"
+- "ESTColor"
+- "BeaconDetails"
+- "UIColor"
+- "/"
+- "String"
+- "Dictionary"
+depends-member:
+- !private ["Ps9AnyObject", "BeaconDetails"]
+- ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "backgroundColorForBeaconColor"]
+- !private ["Ps9AnyObject", "backgroundColors"]
+- !private ["Ps9AnyObject", "beaconName"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "neutralColor"]
+- ["Ps9AnyObject", ""]
+- !private ["C16AMS_Beacon_Model13BeaconDetails", "BeaconDetails"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "ESTColor"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "String"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "UIColor"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "backgroundColor"]
+- !private ["C16AMS_Beacon_Model13BeaconDetails", "backgroundColorForBeaconColor"]
+- !private ["C16AMS_Beacon_Model13BeaconDetails", "backgroundColors"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "beaconName"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "deinit"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "init"]
+- ["C16AMS_Beacon_Model13BeaconDetails", "neutralColor"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- ["Ps14CollectionType", "Value"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "Key"]
+- ["Ps28CustomDebugStringConvertible", "Value"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- ["Ps23CustomStringConvertible", "Key"]
+- ["Ps23CustomStringConvertible", "Value"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Vs10Dictionary", "Index"]
+- ["Vs10Dictionary", "Key"]
+- ["Vs10Dictionary", "Value"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- ["Ps28DictionaryLiteralConvertible", "Key"]
+- ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- ["OSC8ESTColor", "BlueberryPie"]
+- ["OSC8ESTColor", "IcyMarshmallow"]
+- ["OSC8ESTColor", "MintCocktail"]
+- ["Ps9Equatable", "BlueberryPie"]
+- ["Ps9Equatable", "IcyMarshmallow"]
+- ["Ps9Equatable", "MintCocktail"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "BlueberryPie"]
+- ["Ps8Hashable", "IcyMarshmallow"]
+- ["Ps8Hashable", "MintCocktail"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "SubSequence"]
+- ["Ps9Indexable", "Value"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["CSo8NSObject", "init"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo14NSSecureCoding", "init"]
+- ["Ps16RawRepresentable", "BlueberryPie"]
+- ["Ps16RawRepresentable", "IcyMarshmallow"]
+- ["Ps16RawRepresentable", "MintCocktail"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- ["CSo7UIColor", "init"]
+- ["Ps24_ColorLiteralConvertible", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- ["Ps21_ObjectiveCBridgeable", "Key"]
+- ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps12_Reflectable", "Index"]
+- ["Ps12_Reflectable", "Key"]
+- ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C16AMS_Beacon_Model13BeaconDetails"
+- "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- "Ps28DictionaryLiteralConvertible"
+- "OSC8ESTColor"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "Ps16RawRepresentable"
+- "Ps12SequenceType"
+- !private "Vs5Slice"
+- "CSo7UIColor"
+- "Ps24_ColorLiteralConvertible"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/ProximityContent/ObjCBridge.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/EstimoteSDK.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreBluetooth.swiftmodule"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTUtilityManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBluetoothBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDevice.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceNearable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceConnectable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDefinitions.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudSettingProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceNotificationProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceLocationBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconSettingsManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTPeripheralTypeUtility.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTPeripheral.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsCollection.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingBase.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsIBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEstimoteLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEstimoteTLM.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingReadWrite.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingReadOnly.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteTLMPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEddystoneUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEddystoneURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEddystoneTLM.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEddystoneEID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsDeviceInfo.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsGPIO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingConnectivityInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsConnectivity.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsSensors.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingsEddystoneConfigurationService.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfo.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceFilterBeaconV1.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceFilter.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceFilterLocationBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceFilterNearable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTLogger.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconManagerDelegate.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSecureBeaconManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSecureBeaconManagerDelegate.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconConnection.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconDefinitions.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTFirmwareInfoVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingConnectivityPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationConnectivityInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingOperation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationConnectivityPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerSmartPowerModeEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerFlipToSleepEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerDarkToSleepEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryLifetime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerMotionOnlyBroadcastingEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerSmartPowerModeEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerFlipToSleepEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerDarkToSleepEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationPowerBatteryLifetime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerScheduledAdvertisingEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerScheduledAdvertisingPeriod.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTimePeriod.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryPercentage.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingPowerBatteryVoltage.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerScheduledAdvertisingEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerScheduledAdvertisingPeriod.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerBatteryPercentage.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationPowerBatteryVoltage.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoFirmwareVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoApplicationVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoBootloaderVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoHardwareVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoUTCTime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoTags.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoGeoLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoName.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoColor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoIndoorLocationIdentifier.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoIndoorLocationName.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingDeviceInfoUptime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoFirmwareVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoApplicationVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoBootloaderVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoHardwareVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoUTCTime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoTags.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoGeoLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoName.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoColor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationDeviceInfoUptime.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconMajor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconMinor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconProximityUUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconSecureUUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconSecureUUIDPeriodScaler.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconNonStrictMode.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconMotionUUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingIBeaconMotionUUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMajor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMinor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconProximityUUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconSecureUUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconSecureUUIDPeriodScaler.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudOperationIBeaconNonStrictMode.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMotionUUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationIBeaconMotionUUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEstimoteLocationPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteLocationPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEstimoteTLMPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDInstance.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDNamespace.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneUIDPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDInstance.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDNamespace.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneUIDPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLData.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneURLPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLData.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneURLPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneTLMPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneTLMpower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneEIDPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationEddystoneEIDPower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingGPIONotificationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTGPIOConfig.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTGPIOPortsData.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTGPIOPort.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingGPIOPortsData.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingGPIOConfigPort0.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingGPIOConfigPort1.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIONotificationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIOConfigPort0.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationGPIOConfigPort1.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingSensorsAmbientLight.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingSensorsMotionNotificationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingSensorsTemperature.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsAmbientLight.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsMotionNotificationEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconOperationSensorsTemperature.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNotificationMotion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNotificationGPIOData.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingEddystoneConfigurationServiceEnable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableDefinitions.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSimulatedNearableManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableSettingsManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationProtocol.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTPeripheralNearable.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingNearableInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingNearablePower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationNearableInterval.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationNearablePower.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationName.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationApplicationVersion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationHardware.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationMotionOnly.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconProximityUUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconMajor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationIBeaconMinor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationEddystoneURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingNearableEddystoneURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableOperationBroadcastingScheme.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTSettingNearableBroadcastingScheme.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBulkUpdater.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconUpdateConfig.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBeaconUpdateInfo.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTLocationBeaconBulkUpdater.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTLocationBeaconBulkUpdateConfiguration.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTriggerManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTrigger.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDateRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTProximityRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTemperatureRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTMotionRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTOrientationRule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNotificationTransporter.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystone.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneTLM.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneEID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneAttachment.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneFilter.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneFilterUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneFilterEID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneFilterURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTEddystoneFilterURLDomain.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTConfig.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTCloudManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetBeacons.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetJSON.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestBase.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetBeaconsDetails.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetBeaconsPublicDetails.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestBeaconColor.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestBeaconMac.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestAssignGPSLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestPutJSON.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestPostJSON.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestRegisterDevice.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetPendingSettings.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestCancelPendingSettings.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestDelete.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetSettingsHistory.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestGetNearables.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableFirmwareVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTNearableFirmwareUpdateVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTAnalyticsManager.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestAnalyticsTrack.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTAnalyticsEventVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestV2GetDeviceDetails.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestV2GetDevices.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestV2GetDevicesPending.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTBaseVO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceDetails.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceShadow.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceGeoLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceIndoorLocation.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettings.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsGeneral.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiser.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserIBeacon.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneUID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneURL.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneTLM.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEddystoneEID.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSettingsAdvertiserEstimoteTLM.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceStatusReport.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTDeviceSchedule.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTFirmwareInfoV4VO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationMotion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfoMotion.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationAmbientLight.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfoAmbientLight.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationTemperature.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfoTemperature.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationSystemStatus.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfoSystemStatus.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationMagnetometer.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryNotificationGPIO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTTelemetryInfoGPIO.h"
+- "/Users/rakeshbethu/Documents/iOS-SDK-master/Examples/swift/ProximityContent/../../../EstimoteSDK/EstimoteSDK.framework/Headers/ESTRequestBeaconDetails.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+interface-hash: "3b38881523ef1d08888e4c4dd958b89a"
