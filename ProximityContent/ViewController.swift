@@ -7,7 +7,7 @@ import AVKit
 import AVFoundation
 import CoreLocation
 
-class ViewController: UIViewController, ProximityContentManagerDelegate, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
+class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
     
     let locationManager = CLLocationManager()
     
@@ -37,6 +37,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     @IBOutlet weak var FloorBtn: UIButton!
     @IBOutlet weak var TableViewFloor: UITableView!
     
+    @IBOutlet weak var ScanningOnOff: UISwitch!
     
     //Control Items
     @IBOutlet weak var PauseBtn: UIButton!
@@ -44,7 +45,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     @IBOutlet weak var PlayBtn: UIButton!
     @IBOutlet weak var CloseBtn: UIButton!
     @IBOutlet weak var StopBtn: UIButton!
-    
+    var imageItem: UIImage = UIImage()
     
     
     let Buildings:[String] =  ["AMS CAD CAFM", "Pencil Works"]
@@ -172,29 +173,30 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
         
         // CL
         //UnCOMMENT START
-        //        locationManager.delegate = self
-        //        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
-        //        locationManager.requestWhenInUseAuthorization()
-        //        }
-        //        locationManager.startRangingBeacons(in: region)
-        //
-        //
-        //
-        //        self.activityIndicator.startAnimating()
-        //
-        //        self.proximityContentManager = ProximityContentManager(
-        //            beaconIDs: [
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 2001), //lemon 2
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 3001), //pink
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 1001),  //brown
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 12703), //lemon 1
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 37700), //Candy 2
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 24254),//blue
-        ////                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 55670)//mint
-        //            ],
-        //            beaconContentFactory: CachingContentFactory(beaconContentFactory: BeaconDetailsCloudFactory()))
-        //        self.proximityContentManager.delegate = self
-        //        self.proximityContentManager.startContentUpdates()
+       
+        locationManager.delegate = self
+       
+        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse){
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        if !ScanningOnOff.isOn{
+            label.text = "Auto Scanning is turned Off"
+        }
+        
+//        self.proximityContentManager = ProximityContentManager(
+//            beaconIDs: [
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 2001), //lemon 2
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 3001), //pink
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 1001),  //brown
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 12703), //lemon 1
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 37700), //Candy 2
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 24254),//blue
+//                //                BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 2016, minor: 55670)//mint
+//            ],
+//            beaconContentFactory: CachingContentFactory(beaconContentFactory: BeaconDetailsCloudFactory()))
+//        self.proximityContentManager.delegate = self
+//        self.proximityContentManager.startContentUpdates()
         //UNCOMMENT END
     }
     
@@ -202,23 +204,50 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     
     
     
-    func proximityContentManager(_ proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
-        self.activityIndicator?.stopAnimating()
-        self.activityIndicator?.removeFromSuperview()
-        
-        if let beaconDetails = content as? BeaconDetails {
-            self.view.backgroundColor = beaconDetails.backgroundColor
-            self.label.text = "You're near \(beaconAssign[beaconDetails.beaconName]! as String)!"
-            FromSite = (beaconAssign[beaconDetails.beaconName]! as String)
-            
-        } else {
-            self.view.backgroundColor = BeaconDetails.neutralColor
-            self.label.text = "No beacons in range."
-            FromSite = "Workspace A"
-        }
-    }
+//    func proximityContentManager(_ proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
+//        self.activityIndicator?.stopAnimating()
+//        self.activityIndicator?.removeFromSuperview()
+//        
+//        if let beaconDetails = content as? BeaconDetails {
+//            self.view.backgroundColor = beaconDetails.backgroundColor
+//            self.label.text = "You're near \(beaconAssign[beaconDetails.beaconName]! as String)!"
+//            FromSite = (beaconAssign[beaconDetails.beaconName]! as String)
+//            
+//        } else {
+//            self.view.backgroundColor = BeaconDetails.neutralColor
+//            self.label.text = "No beacons in range."
+//            FromSite = "Workspace A"
+//        }
+//    }
     
     //self.label.text = "You're near Sector G3!"
+    
+    
+    @IBAction func ScanOnOffAction(_ sender: UISwitch) {
+        
+        if ScanningOnOff.isOn{
+            locationManager.startRangingBeacons(in: region)
+            activityIndicator.startAnimating()
+        }else{
+            locationManager.stopRangingBeacons(in: region)
+            activityIndicator.stopAnimating()
+            label.text = "Auto Scanning is turned Off"
+        }
+        
+    }
+    
+    var FoundMyLocation: Bool  = false
+    
+    @IBAction func FindMyLocationAction(_ sender: UIButton) {
+        StartNode = ""
+        FromSite = ""
+        StartBuilding = ""
+        StartFloor = ""
+        FoundMyLocation = true
+        locationManager.startRangingBeacons(in: region)
+        
+       
+    }
     
     
     //LocationManager
@@ -232,22 +261,27 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
             
             // self.view.backgroundColor = beaconDetails.backgroundColor
             //                self.label.text = "You're near \(closestbeaconAssign[closestBeacon.minor]! as String)!"
-            //                StartNode = (NodeAssign[closestBeacon.minor]! as String) //PathFinder
-            //                FromSite = (closestbeaconAssign[closestBeacon.minor]! as String)
-            //            StartBuilding = (RoomInfo[StartNode]?["Building"]!!)
-            //            StartFloor = (RoomInfo[StartNode]?["Floor"]! as! String)
-            //
+            StartNode = (NodeAssign[closestBeacon.minor]! as String) //PathFinder
+            FromSite = (closestbeaconAssign[closestBeacon.minor]! as String)
+            StartBuilding = (RoomInfo[StartNode]?["Building"]! as! String)
+            StartFloor = (RoomInfo[StartNode]?["Floor"]! as! String)
             
+           
             self.label.text = "You're near \(closestbeaconAssign[closestBeacon.minor]! as String)!"
-            StartNode = "A6"
-            FromSite = "Sector G3"
-            StartBuilding = "AMS CAD CAFM"
-            StartFloor = "F2"
+            //            StartNode = "A6"
+            //            FromSite = "Sector G3"
+            //            StartBuilding = "AMS CAD CAFM"
+            //            StartFloor = "F2"
             
-            
-            
+            if FoundMyLocation == true &&  StartNode != "" && FromSite != "" && StartFloor != "" && StartBuilding != "" {
+                locationManager.stopRangingBeacons(in: region)
+                FoundMyLocation = false
+            }
             
             if (StartNode == "B2" && (diffBuildings == true)){
+                bgImage.removeFromSuperview()
+                playerViewController.showsPlaybackControls = false
+                TagCount = 4
                 EntranceView.isHidden = true
                 let alert3 = UIAlertController(title: "Alert", message:"You've arrived at North Entrance in PencilWorks Site, Please click Continue to view path", preferredStyle: .alert)
                 alert3.addAction(UIAlertAction(title: "Continue", style: .default) { (UIAlertAction) -> Void in
@@ -259,7 +293,10 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
                     self.present(self.playerViewController, animated: true) {
                         self.playerViewController.player?.play()
                     }
-                    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)})
+                    
+                    NotificationCenter.default.addObserver(self, selector: #selector(self.stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+                    //                    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+                })
                 self.present(alert3, animated: true){}
                 
             }
@@ -620,18 +657,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     
     
     
-    func playerDidFinishPlaying(_ note: Notification){
-        print("Video Finished")
-        
-        // self.playerView
-        //         self.playerViewController.dismiss(animated: true, completion: nil)
-        
-        
-        if self.StartBuilding != self.EndBuilding || diffBuildings == true{
-            EntranceView.isHidden = true
-            self.diffBuildings = false
-        }
-    }
+    
     
     
     
@@ -670,182 +696,184 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     //        }
     //    return stack // 4
     //    }
-//    
+    //
     @IBAction func TestButtonAction(_ sender: UIButton) {
-//        //PathFinder
-//        StartNode = "A6"
-//        FromSite = "Sector G3"
-//        StartBuilding = "AMS CAD CAFM"
-//        StartFloor = "F2"
-                PlayingAction()
-//        self.EndNode = EndNodeAssign[(btnOutlet.titleLabel?.text)!]!
-//        self.toSite = (btnOutlet.titleLabel?.text)!
-//        
-//        self.EndBuilding =  (RoomInfo[EndNode]?["Building"]!)!
-//        self.EndFloor =  (RoomInfo[EndNode]?["Floor"]!)!
-//        //PathFinder
-//        
-//        let A1 = adjacencyList.createVertex(data: "A1")
-//        let A2 = adjacencyList.createVertex(data: "A2")
-//        let A3 = adjacencyList.createVertex(data: "A3")
-//        let A4 = adjacencyList.createVertex(data: "A4")
-//        let A5 = adjacencyList.createVertex(data: "A5")
-//        let A6 = adjacencyList.createVertex(data: "A6")
-//        let A7 = adjacencyList.createVertex(data: "A7")
-//        
-//        let O1 = adjacencyList.createVertex(data: "O1")
-//        let O2 = adjacencyList.createVertex(data: "O2")
-//        let O3 = adjacencyList.createVertex(data: "O3")
-//        
-//        adjacencyList.add(.undirected, from: A1, to: A2,weight: 1)
-//        adjacencyList.add(.undirected, from: A2, to: A1,weight: 1)
-//        adjacencyList.add(.undirected, from: A2, to: A3,weight: 1)
-//        adjacencyList.add(.undirected, from: A2, to: A4,weight: 1)
-//        adjacencyList.add(.undirected, from: A2, to: A5,weight: 1)
-//        adjacencyList.add(.undirected, from: A3, to: A2,weight: 1)
-//        adjacencyList.add(.undirected, from: A4, to: A2,weight: 1)
-//        adjacencyList.add(.undirected, from: A5, to: A2,weight: 1)
-//        adjacencyList.add(.undirected, from: A5, to: A6,weight: 1)
-//        adjacencyList.add(.undirected, from: A5, to: A7,weight: 1)
-//        adjacencyList.add(.undirected, from: A7, to: A5,weight: 1)
-//        adjacencyList.add(.undirected, from: A6, to: A5,weight: 1)
-//        adjacencyList.add(.undirected, from: A7, to: A5,weight: 1)
-//        adjacencyList.add(.undirected, from: A6, to: A5,weight: 1)
-//        
-//        adjacencyList2.add(.undirected, from: A1, to: O1,weight: 1)
-//        adjacencyList2.add(.undirected, from: O1, to: O2,weight: 1)
-//        adjacencyList2.add(.undirected, from: O1, to: O3,weight: 1)
-//        
-//        if StartBuilding == EndBuilding{
-//            if StartFloor == EndFloor{
-//                let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
-//                let EndNodeVertex = adjacencyList.createVertex(data: EndNode)
-//                
-//                var pathArray:[String] = []
-//                
-//                if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
-//                    for edge in edges {
-//                        pathArray.append("\(edge.source)-\(edge.destination)")
-//                    }
-//                }
-//                print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
-//                
-//                
-//                var AVPlayerItemsArray:[AVPlayerItem] = []
-//                for each in pathArray{
-//                    print(each)
-//                    AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
-//                }
-//                
-//                AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
-//                self.playerView = AVQueueItem
-//                
-//                playerViewController.showsPlaybackControls = true
-//                
-//                playerViewController.player = self.playerView
-//                
-//                
-//                //NotificationCenter.default.addObserver(self, selector: #selector(stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-//                //                        addContentOverlayView()
-//                self.present(playerViewController, animated: true) {
-//                    self.playerViewController.player?.play()
-//                }
-//                
-//                ControlsView.isHidden = false
-//                ControlsNormal()
-//                playerViewController.view.addSubview(ControlsView)
-//                
-//                //NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
-//            } else { /// todo Work
-//                
-//                let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
-//                let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
-//                
-//                var pathArray:[String] = []
-//                
-//                if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
-//                    for edge in edges {
-//                        pathArray.append("\(edge.source)-\(edge.destination)")
-//                    }
-//                }
-//                print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
-//                
-//                
-//                var AVPlayerItemsArray:[AVPlayerItem] = []
-//                for each in pathArray{
-//                    print(each)
-//                    AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
-//                }
-//                
-//                AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
-//                playerView = AVQueueItem
-//                playerViewController.player = playerView
-//                self.present(playerViewController, animated: true) {
-//                    self.playerViewController.player?.play()
-//                }
-//                NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlayingTwo(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
-//                
-//                
-//                
-//                
-//            }
-//        }else{
-//            //            EntranceView.isHidden = false
-//            let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
-//            let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
-//            
-//            var pathArray:[String] = []
-//            
-//            if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
-//                for edge in edges {
-//                    pathArray.append("\(edge.source)-\(edge.destination)")
-//                }
-//            }
-//            print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
-//            
-//            
-//            var AVPlayerItemsArray:[AVPlayerItem] = []
-//            for each in pathArray{
-//                print(each)
-//                AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
-//            }
-//            
-//            AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
-//            playerView = AVQueueItem
-//            playerViewController.player = playerView
-//            self.present(playerViewController, animated: true) {
-//                self.playerViewController.player?.play()
-//            }
-//            NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlayingBuilding(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
-//        }
+        //        //PathFinder
+        //        StartNode = "A6"
+        //        FromSite = "Sector G3"
+        //        StartBuilding = "AMS CAD CAFM"
+        //        StartFloor = "F2"
+        PlayingAction()
+        //        self.EndNode = EndNodeAssign[(btnOutlet.titleLabel?.text)!]!
+        //        self.toSite = (btnOutlet.titleLabel?.text)!
+        //
+        //        self.EndBuilding =  (RoomInfo[EndNode]?["Building"]!)!
+        //        self.EndFloor =  (RoomInfo[EndNode]?["Floor"]!)!
+        //        //PathFinder
+        //
+        //        let A1 = adjacencyList.createVertex(data: "A1")
+        //        let A2 = adjacencyList.createVertex(data: "A2")
+        //        let A3 = adjacencyList.createVertex(data: "A3")
+        //        let A4 = adjacencyList.createVertex(data: "A4")
+        //        let A5 = adjacencyList.createVertex(data: "A5")
+        //        let A6 = adjacencyList.createVertex(data: "A6")
+        //        let A7 = adjacencyList.createVertex(data: "A7")
+        //
+        //        let O1 = adjacencyList.createVertex(data: "O1")
+        //        let O2 = adjacencyList.createVertex(data: "O2")
+        //        let O3 = adjacencyList.createVertex(data: "O3")
+        //
+        //        adjacencyList.add(.undirected, from: A1, to: A2,weight: 1)
+        //        adjacencyList.add(.undirected, from: A2, to: A1,weight: 1)
+        //        adjacencyList.add(.undirected, from: A2, to: A3,weight: 1)
+        //        adjacencyList.add(.undirected, from: A2, to: A4,weight: 1)
+        //        adjacencyList.add(.undirected, from: A2, to: A5,weight: 1)
+        //        adjacencyList.add(.undirected, from: A3, to: A2,weight: 1)
+        //        adjacencyList.add(.undirected, from: A4, to: A2,weight: 1)
+        //        adjacencyList.add(.undirected, from: A5, to: A2,weight: 1)
+        //        adjacencyList.add(.undirected, from: A5, to: A6,weight: 1)
+        //        adjacencyList.add(.undirected, from: A5, to: A7,weight: 1)
+        //        adjacencyList.add(.undirected, from: A7, to: A5,weight: 1)
+        //        adjacencyList.add(.undirected, from: A6, to: A5,weight: 1)
+        //        adjacencyList.add(.undirected, from: A7, to: A5,weight: 1)
+        //        adjacencyList.add(.undirected, from: A6, to: A5,weight: 1)
+        //
+        //        adjacencyList2.add(.undirected, from: A1, to: O1,weight: 1)
+        //        adjacencyList2.add(.undirected, from: O1, to: O2,weight: 1)
+        //        adjacencyList2.add(.undirected, from: O1, to: O3,weight: 1)
+        //
+        //        if StartBuilding == EndBuilding{
+        //            if StartFloor == EndFloor{
+        //                let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
+        //                let EndNodeVertex = adjacencyList.createVertex(data: EndNode)
+        //
+        //                var pathArray:[String] = []
+        //
+        //                if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
+        //                    for edge in edges {
+        //                        pathArray.append("\(edge.source)-\(edge.destination)")
+        //                    }
+        //                }
+        //                print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
+        //
+        //
+        //                var AVPlayerItemsArray:[AVPlayerItem] = []
+        //                for each in pathArray{
+        //                    print(each)
+        //                    AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+        //                }
+        //
+        //                AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
+        //                self.playerView = AVQueueItem
+        //
+        //                playerViewController.showsPlaybackControls = true
+        //
+        //                playerViewController.player = self.playerView
+        //
+        //
+        //                //NotificationCenter.default.addObserver(self, selector: #selector(stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        //                //                        addContentOverlayView()
+        //                self.present(playerViewController, animated: true) {
+        //                    self.playerViewController.player?.play()
+        //                }
+        //
+        //                ControlsView.isHidden = false
+        //                ControlsNormal()
+        //                playerViewController.view.addSubview(ControlsView)
+        //
+        //                //NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        //            } else { /// todo Work
+        //
+        //                let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
+        //                let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
+        //
+        //                var pathArray:[String] = []
+        //
+        //                if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
+        //                    for edge in edges {
+        //                        pathArray.append("\(edge.source)-\(edge.destination)")
+        //                    }
+        //                }
+        //                print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
+        //
+        //
+        //                var AVPlayerItemsArray:[AVPlayerItem] = []
+        //                for each in pathArray{
+        //                    print(each)
+        //                    AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+        //                }
+        //
+        //                AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
+        //                playerView = AVQueueItem
+        //                playerViewController.player = playerView
+        //                self.present(playerViewController, animated: true) {
+        //                    self.playerViewController.player?.play()
+        //                }
+        //                NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlayingTwo(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        //
+        //
+        //
+        //
+        //            }
+        //        }else{
+        //            //            EntranceView.isHidden = false
+        //            let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
+        //            let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
+        //
+        //            var pathArray:[String] = []
+        //
+        //            if let edges = adjacencyList.breadthFirstSearch(from: StartNodeVertex as Vertex, to: EndNodeVertex) {
+        //                for edge in edges {
+        //                    pathArray.append("\(edge.source)-\(edge.destination)")
+        //                }
+        //            }
+        //            print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
+        //
+        //
+        //            var AVPlayerItemsArray:[AVPlayerItem] = []
+        //            for each in pathArray{
+        //                print(each)
+        //                AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+        //            }
+        //
+        //            AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
+        //            playerView = AVQueueItem
+        //            playerViewController.player = playerView
+        //            self.present(playerViewController, animated: true) {
+        //                self.playerViewController.player?.play()
+        //            }
+        //            NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlayingBuilding(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        //        }
     }
     
     //var AVPlayerItemsArray:[AVPlayerItem] = []
     var ReplayVideosArray:[String] = []
     
-  @IBAction func PlayingAction() {
+    @IBAction func PlayingAction() {
         print("Playing Action Called")
-   
-    playerViewController.showsPlaybackControls = false
-    
-    bgImage.removeFromSuperview()
+        
+        playerViewController.showsPlaybackControls = false
+        
+        bgImage.removeFromSuperview()
+        ReplayVideosArray.removeAll()
         //To Be removed
         
-        StartNode = "A6"
-        FromSite = "Sector G3"
-        StartBuilding = "AMS CAD CAFM"
-        StartFloor = "F2"
-        ReplayVideosArray.removeAll()
+        //        StartNode = "A6"
+        //        FromSite = "Sector G3"
+        //        StartBuilding = "AMS CAD CAFM"
+        //        StartFloor = "F2"
+        
         
         //PathFinder
-        
+//        if StartBuilding != "" && EndBuilding != "" && StartFloor != "" && EndFloor != ""
+//            && StartNode != "" && EndNodeAssign[(btnOutlet.titleLabel?.text)!]! != "" {
         self.EndNode = EndNodeAssign[(btnOutlet.titleLabel?.text)!]!
         self.toSite = (btnOutlet.titleLabel?.text)!
         
         EndBuilding =  (RoomInfo[EndNode]?["Building"]!)!
         EndFloor =  (RoomInfo[EndNode]?["Floor"]!)!
         //PathFinder
-        
+        print("From : \(FromSite) , To: \(toSite)\n SB: \(StartBuilding) , EB: \(EndBuilding),   SF: \(StartFloor),  EF: \(EndFloor)")
         let A1 = adjacencyList.createVertex(data: "A1")
         let A2 = adjacencyList.createVertex(data: "A2")
         let A3 = adjacencyList.createVertex(data: "A3")
@@ -876,10 +904,12 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
         adjacencyList2.add(.undirected, from: A1, to: O1,weight: 1)
         adjacencyList2.add(.undirected, from: O1, to: O2,weight: 1)
         adjacencyList2.add(.undirected, from: O1, to: O3,weight: 1)
+       
+        
         
         if StartBuilding == EndBuilding{
             if StartFloor == EndFloor{
-                 TagCount = 0
+                TagCount = 0
                 let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
                 let EndNodeVertex = adjacencyList.createVertex(data: EndNode)
                 
@@ -891,10 +921,10 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
                     }
                 }
                 
-               var AVPlayerItemsArray:[AVPlayerItem] = []
+                var AVPlayerItemsArray:[AVPlayerItem] = []
                 for each in pathArray{
                     
-                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+                    AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
                     ReplayVideosArray.append(each)
                     
                 }
@@ -912,9 +942,9 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
                 StopBtn.isHidden = false
                 playerViewController.view.addSubview(ControlsView)
                 NotificationCenter.default.addObserver(self, selector: #selector(stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
-        
+                
             } else { /// todo Work
-                 TagCount = 1
+                TagCount = 1
                 let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
                 let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
                 
@@ -955,6 +985,8 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
                 
             }
         }else{
+            
+            TagCount = 3
             //            EntranceView.isHidden = false
             let StartNodeVertex = adjacencyList.createVertex(data: StartNode)
             let EndNodeVertex = adjacencyList.createVertex(data: (ExitNodes[StartBuilding]?[StartFloor]?[0])!)
@@ -973,6 +1005,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
             for each in pathArray{
                 print(each)
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+                ReplayVideosArray.append(each)
             }
             
             AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
@@ -981,19 +1014,42 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
             self.present(playerViewController, animated: true) {
                 self.playerViewController.player?.play()
             }
+            
+            //Controls View
+            ControlsView.isHidden = false
+            PauseBtn.isHidden = false
+            StopBtn.isHidden = false
+            playerViewController.view.addSubview(ControlsView)
+            
             NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlayingBuilding(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
         }
+        
+//        }else{
+//            print("Not Selected")
+//        }
+        
+        
+        
     }
     var bgImage :UIImageView = UIImageView()
-  
+    
     var TagCount:Int = 0
     
-    
-    func playerDidFinishPlayingTwo(_ note: Notification){
-     bgImage.removeFromSuperview()
-        ReplayVideosArray.removeAll()
-        var InternalReplayVideosArray:[String] = []
+    func playerDidFinishPlaying(_ note: Notification){
+        print("Video Finished")
         
+        // self.playerView
+        //         self.playerViewController.dismiss(animated: true, completion: nil)
+        
+        
+        if self.StartBuilding != self.EndBuilding || diffBuildings == true{
+            EntranceView.isHidden = true
+            self.diffBuildings = false
+        }
+    }
+    func playerDidFinishPlayingTwo(_ note: Notification){
+        bgImage.removeFromSuperview()
+        ReplayVideosArray.removeAll()
         TagCount = 2
         
         
@@ -1007,7 +1063,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
         adjacencyList2.add(.undirected, from: O1, to: O3,weight: 1)
         print("Video Finished")
         self.playerViewController.dismiss(animated: true, completion: nil)
-       
+        
         
         let alert3 = UIAlertController(title: "Alert", message:"You arrived to the exit in this Floor, Please click 'Continue' to view path towards \(self.toSite) in next Floor.", preferredStyle: .alert)
         alert3.addAction(UIAlertAction(title: "Continue", style: .default) {
@@ -1018,24 +1074,14 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
             print("TO SITE IS : \(self.toSite)")
             if (self.toSite == "Front Desk" ){
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "A1-O1", ofType: "mp4")!)))
-            InternalReplayVideosArray.append("A1-O1")
             }else if (self.toSite == "Brad's Room" ){
                 
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "A1-O1", ofType: "mp4")!)))
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "O1-O2", ofType: "mp4")!)))
-                InternalReplayVideosArray.append("A1-O1")
-                InternalReplayVideosArray.append("A1-O2")
-                
             }else if (self.toSite == "Training Room" ){
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "A1-O1", ofType: "mp4")!)))
                 AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "O1-O3", ofType: "mp4")!)))
-              InternalReplayVideosArray.append("A1-O1")
-               InternalReplayVideosArray.append("O1-O3")
             }
-            
-            
-            
-            
             
             
             self.AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
@@ -1045,13 +1091,10 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
                 self.playerViewController.player?.play()
             }
             
-             NotificationCenter.default.addObserver(self, selector: #selector(self.stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
             
-//            NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+            //            NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
         })
-        for each in InternalReplayVideosArray{
-            self.ReplayVideosArray.append(each)
-        }
         //Controls View
         self.ControlsView.isHidden = false
         self.PauseBtn.isHidden = false
@@ -1063,37 +1106,68 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     }
     
     @IBAction func NEAction(_ sender: UIButton) {
+        
+        bgImage.removeFromSuperview()
+        ReplayVideosArray.removeAll()
         var AVPlayerItemsArray:[AVPlayerItem] = []
         
         AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "MT04", ofType: "mp4")!)))
+        ReplayVideosArray.append("MT04")
+        
         self.AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
         self.playerView = self.AVQueueItem
         self.playerViewController.player = self.playerView
         self.present(self.playerViewController, animated: true) {
             self.playerViewController.player?.play()
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
         
+        //Controls View
+        ControlsView.isHidden = false
+        PauseBtn.isHidden = false
+        StopBtn.isHidden = false
+        playerViewController.view.addSubview(ControlsView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        
+        //        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        //
         
     }
     @IBAction func SEAction(_ sender: UIButton) {
         
+        bgImage.removeFromSuperview()
+        ReplayVideosArray.removeAll()
+        
         var AVPlayerItemsArray:[AVPlayerItem] = []
         
         AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "MT01", ofType: "mp4")!)))
+        ReplayVideosArray.append("MT01")
+        
         self.AVQueueItem = AVQueuePlayer(items: AVPlayerItemsArray)
         self.playerView = self.AVQueueItem
         self.playerViewController.player = self.playerView
         self.present(self.playerViewController, animated: true) {
             self.playerViewController.player?.play()
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
         
+        //Controls View
+        ControlsView.isHidden = false
+        PauseBtn.isHidden = false
+        StopBtn.isHidden = false
+        playerViewController.view.addSubview(ControlsView)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        
+        //        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        //
     }
     
     func playerDidFinishPlayingBuilding(_ note: Notification){
         
-        
+        TagCount = 5
+        bgImage.removeFromSuperview()
+        ReplayVideosArray.removeAll()
         self.playerViewController.dismiss(animated: true, completion: nil)
         
         
@@ -1150,7 +1224,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     
     @IBAction func ReplayVideoAction(_ sender: UIButton) {
         
-        print("From : \(FromSite) , To: \(toSite)\n SB: \(StartBuilding) , EB: \(EndBuilding),   SF: \(StartFloor),  EF: \(EndFloor)")
+        //        print("From : \(FromSite) , To: \(toSite)\n SB: \(StartBuilding) , EB: \(EndBuilding),   SF: \(StartFloor),  EF: \(EndFloor)")
         
         ControlsView.isHidden = false
         StopBtn.isHidden = false
@@ -1159,42 +1233,48 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
         ReplayBtn.isHidden = true
         CloseBtn.isHidden = true
         
-      bgImage.removeFromSuperview()
+        bgImage.removeFromSuperview()
         OverlayView.isHidden = true
         var replayArray : [AVPlayerItem] = []
-       
+        
         print("Count of Videos: \(ReplayVideosArray.count)")
-      // print(TagCount)
+        // print(TagCount)
         if TagCount == 2{
-                ReplayVideosArray.removeAll()
-        if (toSite == "Front Desk" ){
-           ReplayVideosArray.append("A1-O1")
-        }else if (toSite == "Brad's Room" ){
-            
-           ReplayVideosArray.append("A1-O1")
-            ReplayVideosArray.append("O1-O2")
-            
-            print("Success Lopp")
-        }else if (toSite == "Training Room" ){
-           ReplayVideosArray.append("A1-O1")
-            ReplayVideosArray.append("O1-O3")
-        }
+            ReplayVideosArray.removeAll()
+            if (toSite == "Front Desk" ){
+                ReplayVideosArray.append("A1-O1")
+            }else if (toSite == "Brad's Room" ){
+                
+                ReplayVideosArray.append("A1-O1")
+                ReplayVideosArray.append("O1-O2")
+                
+                print("Success Lopp")
+            }else if (toSite == "Training Room" ){
+                ReplayVideosArray.append("A1-O1")
+                ReplayVideosArray.append("O1-O3")
             }
-       //print(ReplayVideosArray.count)
+        }else if TagCount == 4{
+            //  MT04
+            ReplayVideosArray.removeAll()
+            ReplayVideosArray.append("MT04")
+        }
+        //print(ReplayVideosArray.count)
         
         for each in ReplayVideosArray{
             print(each)
             replayArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "\(each)", ofType: "mp4")!)))
+            
+           
         }
         
-        
+       // imageItem = getLastFrame(from: replayArray.last!)!
         ReplayPlayer = AVQueuePlayer(items: replayArray)
         playerView = ReplayPlayer
         
         playerViewController.player = playerView
         playerViewController.player?.play()
         
-         NotificationCenter.default.addObserver(self, selector: #selector(stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
+        NotificationCenter.default.addObserver(self, selector: #selector(stopedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.playerView.items().last)
     }
     
     
@@ -1205,15 +1285,17 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
     func stopedPlaying() {
         print("STopped Playying Called")
         self.playerViewController.showsPlaybackControls = true
-        print(playerViewController.player?.currentItem?.duration)
-        
-        if  let imageItem: UIImage =  getLastFrame(from: (playerViewController.player?.currentItem)!)! {
-
-                bgImage = UIImageView(image: imageItem)
         
         
-                playerViewController.view.addSubview(bgImage)
-        }
+          let imageItem: UIImage =  getLastFrame(from: (playerViewController.player?.currentItem)!)!
+//        {
+        
+            bgImage = UIImageView(image: imageItem)
+            
+            print("No Last Frame? \(bgImage)")
+            playerViewController.view.addSubview(bgImage)
+//        }
+        
         // addContentOverlayView()
         playerViewController.view.addSubview(ControlsView)
         ControlsView.isHidden = false
@@ -1245,7 +1327,7 @@ class ViewController: UIViewController, ProximityContentManagerDelegate, UITable
         }
     }
     
-  
+    
     
     
     
