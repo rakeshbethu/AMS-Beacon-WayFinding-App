@@ -29,7 +29,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
     var A01Item, A02Item,B01Item,B02Item,C01Item,C02Item,C03Item,D01Item,D02Item,N01Item, MT03Item: AVPlayerItem?
     
     var prevItem:AVPlayerItem?
-    
+     let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet var btnOutlet: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var BuildingBtn: UIButton!
@@ -134,7 +134,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
     
     
     
-    var closestbeaconAssign:[NSNumber:String] = [2001:"Workspace A", 1001:"Dan Room", 3001:"Sector G3", 24254:"Workspace B",12703:"Restroom",55670:"Network Room",37700:"Canteen"]
+    var closestbeaconAssign:[NSNumber:String] = [2001:"Workspace A", 1001:"Dan Room", 3001:"Sector G3", 24254:"Workspace B",12703:"Restroom",55670:"Network Room",37700:"North Entrance"]
     
     var proximityContentManager: ProximityContentManager!
     
@@ -854,6 +854,8 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         
         playerViewController.showsPlaybackControls = false
         
+        
+        
         bgImage.removeFromSuperview()
         ReplayVideosArray.removeAll()
         //To Be removed
@@ -905,7 +907,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         adjacencyList2.add(.undirected, from: O1, to: O2,weight: 1)
         adjacencyList2.add(.undirected, from: O1, to: O3,weight: 1)
        
-        
+    playerViewController.showsPlaybackControls = false
         
         if StartBuilding == EndBuilding{
             if StartFloor == EndFloor{
@@ -936,6 +938,8 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
                 self.present(playerViewController, animated: true) {
                     self.playerViewController.player?.play()
                 }
+                
+                
                 //Controls View
                 ControlsView.isHidden = false
                 PauseBtn.isHidden = false
@@ -957,6 +961,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
                 }
                 print("Start Node   \(StartNode)   End Node    \(EndNode)    Start Building: \(StartBuilding)        End Building: \(EndBuilding)    \n StartFloor: \(StartFloor)     End Floor: \(EndFloor)     ")
                 
+          
                 
                 var AVPlayerItemsArray:[AVPlayerItem] = []
                 for each in pathArray{
@@ -1052,7 +1057,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         ReplayVideosArray.removeAll()
         TagCount = 2
         
-        
+        playerViewController.showsPlaybackControls = false
         
         let A1 = adjacencyList.createVertex(data: "A1")
         let O1 = adjacencyList.createVertex(data: "O1")
@@ -1110,7 +1115,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         bgImage.removeFromSuperview()
         ReplayVideosArray.removeAll()
         var AVPlayerItemsArray:[AVPlayerItem] = []
-        
+        playerViewController.showsPlaybackControls = false
         AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "MT04", ofType: "mp4")!)))
         ReplayVideosArray.append("MT04")
         
@@ -1139,7 +1144,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         ReplayVideosArray.removeAll()
         
         var AVPlayerItemsArray:[AVPlayerItem] = []
-        
+        playerViewController.showsPlaybackControls = false
         AVPlayerItemsArray.append(AVPlayerItem(url: URL(fileURLWithPath:Bundle.main.path(forResource: "MT01", ofType: "mp4")!)))
         ReplayVideosArray.append("MT01")
         
@@ -1168,6 +1173,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
         TagCount = 5
         bgImage.removeFromSuperview()
         ReplayVideosArray.removeAll()
+        playerViewController.showsPlaybackControls = false
         self.playerViewController.dismiss(animated: true, completion: nil)
         
         
@@ -1225,7 +1231,7 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
     @IBAction func ReplayVideoAction(_ sender: UIButton) {
         
         //        print("From : \(FromSite) , To: \(toSite)\n SB: \(StartBuilding) , EB: \(EndBuilding),   SF: \(StartFloor),  EF: \(EndFloor)")
-        
+        playerViewController.showsPlaybackControls = false
         ControlsView.isHidden = false
         StopBtn.isHidden = false
         PlayBtn.isHidden = true
@@ -1284,17 +1290,23 @@ class ViewController: UIViewController, /*ProximityContentManagerDelegate, */UIT
     
     func stopedPlaying() {
         print("STopped Playying Called")
-        self.playerViewController.showsPlaybackControls = true
+        self.playerViewController.showsPlaybackControls = false
+        
         
         
           let imageItem: UIImage =  getLastFrame(from: (playerViewController.player?.currentItem)!)!
-//        {
+
+       
+       
         
             bgImage = UIImageView(image: imageItem)
-            
+             bgImage.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height )
             print("No Last Frame? \(bgImage)")
+        
+        
             playerViewController.view.addSubview(bgImage)
-//        }
+           // bgImage.bounds = view.frame.insetBy(dx: 15, dy: 0)
+//        bgImage.layoutMargins = UIEdgeInsetsMake(0, 0, 50, 0);
         
         // addContentOverlayView()
         playerViewController.view.addSubview(ControlsView)
